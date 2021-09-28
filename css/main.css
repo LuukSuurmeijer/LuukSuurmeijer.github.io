@@ -25,9 +25,9 @@ h1 {
 }
 
 h2 {
+  border-bottom: : 1px solid #d5d5d5;
   font-size: 2em;
   font-family:'Helvetica', 'Arial', 'Sans-Serif';
-  border-bottom: : 1px solid #d5d5d5
 
 }
 

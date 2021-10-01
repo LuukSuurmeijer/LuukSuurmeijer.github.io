@@ -54,6 +54,7 @@ text {
     line-height: 1.4em;
     color: #333;
     opacity: 0.6
+    font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
 
 footer {

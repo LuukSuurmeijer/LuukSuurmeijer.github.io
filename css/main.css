@@ -75,13 +75,13 @@ ul.posts li {
     position:relative;
     overflow:hidden;
     border-radius: 50%;
-    height: 50%;
-    width: 50%;
+    height: 25px;
+    width: 25px;
 }
 
 .profile-picture img {
     position:absolute;
-    height: 50%;
-    width: 50%;
+    height: 25px;
+    width: 25px;
     max-width:100%;
 }

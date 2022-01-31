@@ -71,6 +71,17 @@ ul.posts li {
     list-style: none;
 }
 
-img {
- border-radius: 50%;
+.profile-picture {
+    position:relative;
+    overflow:hidden;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.profile-picture img {
+    position:absolute;
+    height: auto;
+    width: auto;
+    max-width:100%;
 }

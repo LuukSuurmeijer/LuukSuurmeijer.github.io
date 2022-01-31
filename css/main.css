@@ -81,7 +81,7 @@ ul.posts li {
 
 .profile-picture img {
     position:absolute;
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 50px;
     max-width:100%;
 }

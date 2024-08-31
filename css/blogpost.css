@@ -10,7 +10,7 @@ html {
     font: 100%/1.5 sans-serif;
     word-wrap: break-word;
     margin: 0 auto;
-    padding: 1.5em;
+    padding: 1em;
  }
 
 @media (min-width: 768px) {
@@ -25,6 +25,12 @@ h1, h2, h3, h4 {
     color: #333;
  }
 
+ div.container {
+  max-width: 2000px;
+  margin: auto;
+  border: none;
+}
+
 a {
     color: #fa6432;
     text-decoration: none;
@@ -34,7 +40,7 @@ a:hover, a:focus, a:active {
  }
 
 p {
-    margin: 1em 0;
+    margin: 1em 0px;
     line-height: 1.5;
  }
 p code {

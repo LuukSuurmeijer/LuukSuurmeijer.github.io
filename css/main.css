@@ -9,10 +9,17 @@ body {
     margin: 60px auto;
     width: 65%;
 }
+
+body.intro {
+    margin: 60px auto;
+    width: 70%;
+}
+
 nav ul, footer ul {
     padding: 0px;
     list-style: none;
     font-weight: bold;
+    font-size: 20px;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -20,10 +27,11 @@ nav ul li, footer ul li {
 }
 a {
     text-decoration: none;
-    color: #999;
+    color: #32911f;
 }
 a:hover {
     text-decoration: underline;
+    color: #32911f;
 }
 h1 {
     font-size: 3em;
@@ -32,6 +40,7 @@ h1 {
 h2 {
   border-bottom: : 1px solid #d5d5d5;
   font-size: 2em;
+  opacity: 50%;
 
 }
 
@@ -75,9 +84,14 @@ ul.posts li {
 .profile-picture {
     position:relative;
     overflow:hidden;
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
+    border-style: hidden;
+    float: right; /* Float image to the right */
+    margin-left: 80px; /* Add some spacing between the image and text */
+}
+
+
+div {
+  text-align: justify;
 }
 
 .blurb img {
@@ -85,7 +99,7 @@ float: right;
 border-radius: 50%;
 width: 200px;
 height: 200px;
-background: #555;
+background: none;
 overflow: hidden;
 
 }
@@ -95,4 +109,17 @@ position: relative;
 top: 18px;
 left: 10px;
 font-size: 3em;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    float: right;
+    background: none;
+    overflow: hidden;
+}
+
+.ipa {
+    opacity: 50%;
+    font-size: 14px;
 }

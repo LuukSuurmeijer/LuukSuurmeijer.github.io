@@ -26,13 +26,15 @@ h1, h2, h3, h4 {
  }
 
  div.container {
-  max-width: 2000px;
+  max-width: 100%;
+  max-height: 50%;
   margin: auto;
   border: none;
+  overflow: hidden;
 }
 
 a {
-    color: #fa6432;
+    color: #32911f;
     text-decoration: none;
  }
 a:hover, a:focus, a:active {
@@ -70,16 +72,26 @@ dl dd {
  }
 
 img {
-    max-width: 100%;
+    width: 100%;
+    max-height: 500px;
     display: block;
     margin: 0 auto;
     padding: 0.5em;
+    object-fit: cover;
  }
+
+ .img span {
+    display: block;
+    opacity: 50%;
+    color:#666;
+    font-size: smaller;
+    text-align: center;
+}
 
 blockquote {
     padding-left: 1em;
     font-style: italic;
-    border-left: solid 1px #fa6432;
+    border-left: solid 1px #32911f;
  }
 
 table {
@@ -173,4 +185,9 @@ header nav {
 }
 header a + a {
     margin-left: 1rem;
+}
+
+footer {
+    font-size: smaller;
+    border-top: 1px solid #d5d5d5;
 }

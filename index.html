@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async
-			src="https://www.googletagmanager.com/gtag/js?id=G-QDB5EHRGNJ"></script>
-		<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-QDB5EHRGNJ');
-	</script>
-
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<meta charset="UTF-8">
 		<meta name="description" content="Website of Luuk Suurmeijer">
 		<meta name="author" content="Luuk Suurmeijer">
 		<title>Luuk Suurmeijer</title>
 		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<!--<img class="profile-picture" src="img/andromeda.jpg" alt="ProfilePic" align="right"> -->
 	</head>
-	<body>
+	<body class="intro">
 		<nav>
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="index.html#publications">Publications</a></li>
+				<li><a href='blog_landing_page.html'>Blog</a></li>
 				<li><a href="index.html#other">Other</a></li>
 				<li><a href="index.html#updates">Recently & Upcoming</a></li>
 
@@ -32,10 +25,11 @@
 		</nav>
 		<div class="container">
 			<div class="blurb">
-				<img src="img/croppedpic.jpg" alt="avatar" />
+				<img src="img/croppedpic.jpg" alt="avatar" class="profile-picture" />
 				<h1>Luuk Suurmeijer</h1>
-				<div class="opaque">[ˈlyk ˈsyːɹmɛjəɹ] | he/him </div>
-				<p> NLP Engineer interested in computational semantics, cognitive modelling,
+				<div class="ipa">[ˈlyk ˈsyːɹmɛjəɹ] | he/him </div>
+				<p class="intro"> NLP Engineer interested in computational semantics,
+					cognitive modelling,
 					and language evolution who is a firm believer the <a
 						href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html">bitter
 						lesson</a> will stop holding for NLP.
@@ -51,82 +45,126 @@
 							href="https://scholar.google.com/citations?user=S8Egd08AAAAJ&h">scholar</a></li>
 					<li><a href="https://github.com/LuukSuurmeijer">github</a></li>
 					<li><i class="fa fa-twitter"></i>@highfrontvowel</li>
-					<li><a
-							href="https://www.linkedin.com/in/luuk-suurmeijer-2996b6138/">linkedin</a></li>
-
 				</ul>
 			</footer>
 		</body>
+		<body>
+			<!--3 MOST RECENT POSTS-->
 
-		<h2 id="publications">Publications</h2>
-		<ul>
-			<li><text class="item">Suurmeijer, L., Venhuizen, N.J., Brouwer, H. (in
-					prep). Compositionality in Distributional Formal Semantics.
-					[<a href="mailto:luuk.suurmeijer@hhu.com">email</a>]</text></li>
+			<!--BLOG CONTAINER-->
+			<div class="blog-container">
 
-			<li><text class="item"><a
-						href="https://doi.org/10.3389/fpsyg.2020.592266">Suurmeijer,
-						L., Parafita Couto, M., Gullberg, M. (2020). Structural and
-						Extralinguistic Aspects of Code-Switching:
-						Evidence From Papiamentu-Dutch Auditory Sentence Matching. Frontiers in
-						Psychology</a></text></li>
+				<!--BOX 1-->
+				<div class="blog-box">
+					<!-- IMG -->
 
-		</ul>
+					<div class="blog-img">
+						<img src="posts/links_nov_2024/headerimage.jpg" ,
+							alt="Blog">
+					</div>
 
-		<h2 id="talks">Talks</h2>
-		<ul>
-			<li><text class="item">Suurmeijer, L. Build your own Semantle-clone:
-					Introduction to Distributional Semantics for Linguistis. 72nd Student
-					Conference on Linguistics (StuTS) </text></li>
+					<!--TEXT 1-->
 
-			<li><text class="item">Suurmeijer, L., H. Filip, N.J. Venhuizen.
-					Probabilities in language and the world: Modeling
-					syllogistic reasoning.<a
-						href="https://gdr-lift.loria.fr/bridges-and-gaps-workshop/">
-						Bridges and Gaps between Formal and Computational Linguistics, European
-						Summer School in Logic, Language and Information 2022</a></text></li>
+					<div class="blog-text">
+						<span> 30 November 2024</span>
+						<a href="posts/links_nov_2024/links_november_2024.html" ,
+							class="blog-title">Thoughts November</a>
+						<p>Thoughts I had this month.</p>
+						<a
+							href="posts/links_nov_2024/links_november_2024.html">Read
+							More</a>
+					</div>
+				</div>
 
-			<li><text class="item">Suurmeijer, L. Compositionality in Distributional
-					Formal Semantics. Meaning in Language Colloquium, Heinrich-Heine University
-					Düsseldorf</text></li>
-		</ul>
+				<!--BOX 2-->
+				<div class="blog-box">
+					<!-- IMG -->
 
-		<h2 id="other">Other</h2>
-		<h3> Master thesis</h3>
-		<text class="item">Suurmeijer,
-			L. (2021). Compositionality in Distributional Formal Semantics. Universität
-			des Saarlandes. [<a
-				href="papers/luuksuurmeijer_masterthesis_30-08-2021_final.pdf">pdf</a>]</text>
-		<h3> Bachelor thesis</h3>
-		<text class="item">Suurmeijer,
-			L. (2018). R-coloring interactions in Element Theory. Universiteit Leiden.
-			[<a href="papers/bachelor_thesis_2018.pdf">pdf</a>]</text>
+					<div class="blog-img">
+						<img src="posts/forgotten_food_1/headerimage.JPG" ,
+							alt="Blog">
+					</div>
 
-		<h2 id="updates">Recently & Upcoming</h2>
-		<ul>
-			<li><text class="item">11.2024 &emsp; Attended the <a
-						href="https://dataaisummit.databricks.com/flow/db/wt24ams/reg/page/landing">AI
-						World Tour Amsterdam</a></text></li>
+					<!--TEXT 2-->
 
-			<li><text class="item">07.2024 &emsp; Became a contributor to <a
-						href="https://github.com/inseq-team/inseq">inseq</a>, an explainability
-					library for python.</text></li>
+					<div class="blog-text">
+						<span> 8 September 2024</span>
+						<a href="posts/forgotten_food_1/forgotten_food_1.html" ,
+							class="blog-title">Forgotten Food #1</a>
+						<p>Reminiscing about food and what led up to eating
+							it.</p>
+						<a
+							href="posts/forgotten_food_1/forgotten_food_1.html">Read
+							More</a>
+					</div>
+				</div>
+			</div>
 
-			<!-- <li><text class="item">29.03.2024 &emsp; I went climbing in nature for the
-					first time. Super scary, but so cool.</text><br> <center><img
-						src="img/climbing.jpg" alt="Me climbing" width="250" height="250"
-						class="center"></center> </li> -->
+			<!--3 MOST RECENT POSTS-->
 
-			<li><text class="item">10.11.2023 &emsp; Attended <a
-						href="https://www.g10vandeeconomie.nl/2023">G10 van de economie, filosofie
-						& the arts</a></text></li>
+			<!--REST OF THE SITE-->
 
-			<li><text class="item">23.11.2023 &emsp; Attended <a
-						href="https://projects.illc.uva.nl/indeep/">InDeep: Explaining Foundation
-						Models</a></text></li>
+			<h2 id="publications">Publications</h2>
+			<ul>
+				<li><text class="item">Suurmeijer, L., Venhuizen, N.J., Brouwer, H. (in
+						prep). Compositionality in Distributional Formal Semantics.
+						[<a href="mailto:luuk.suurmeijer@hhu.com">email</a>]</text></li>
 
-			<li><text class="item">15.09.2023 &emsp; Attended <a
-						href="https://hils2024.nl/">Transformers At Work 2023</a></text></li>
-		</ul>
+				<li><text class="item"><a
+							href="https://doi.org/10.3389/fpsyg.2020.592266">Suurmeijer,
+							L., Parafita Couto, M., Gullberg, M. (2020). Structural and
+							Extralinguistic Aspects of Code-Switching:
+							Evidence From Papiamentu-Dutch Auditory Sentence Matching. Frontiers in
+							Psychology</a></text></li>
+
+			</ul>
+
+			<h2 id="talks">Talks</h2>
+			<ul>
+				<li><text class="item">Suurmeijer, L. Build your own Semantle-clone:
+						Introduction to Distributional Semantics for Linguistis. 72nd Student
+						Conference on Linguistics (StuTS) </text></li>
+
+				<li><text class="item">Suurmeijer, L., H. Filip, N.J. Venhuizen.
+						Probabilities in language and the world: Modeling
+						syllogistic reasoning.<a
+							href="https://gdr-lift.loria.fr/bridges-and-gaps-workshop/">
+							Bridges and Gaps between Formal and Computational Linguistics, European
+							Summer School in Logic, Language and Information 2022</a></text></li>
+
+				<li><text class="item">Suurmeijer, L. Compositionality in Distributional
+						Formal Semantics. Meaning in Language Colloquium, Heinrich-Heine
+						University
+						Düsseldorf</text></li>
+			</ul>
+
+			<h2 id="other">Other</h2>
+			<h3> Master thesis</h3>
+			<text class="item">Suurmeijer,
+				L. (2021). Compositionality in Distributional Formal Semantics. Universität
+				des Saarlandes. [<a
+					href="papers/luuksuurmeijer_masterthesis_30-08-2021_final.pdf">pdf</a>]</text>
+			<h3> Bachelor thesis</h3>
+			<text class="item">Suurmeijer,
+				L. (2018). R-coloring interactions in Element Theory. Universiteit Leiden.
+				[<a href="papers/bachelor_thesis_2018.pdf">pdf</a>]</text>
+
+			<h2 id="updates">Recently & Upcoming</h2>
+			<ul>
+				<li><text class="item">01.07.2024 &emsp; I will be attending <a
+							href="https://hils2024.nl/">Highlights in Language Science 2024</a> in
+						Nijmegen!</text></li>
+
+				<li><text class="item">29.03.2024 &emsp; I went climbing in nature for the
+						first time. Super scary, but so cool.</text><br> </li>
+
+				<li><text class="item">23.11.2023 &emsp; Attended <a
+							href="https://projects.illc.uva.nl/indeep/">InDeep: Explaining Foundation
+							Models</a></text></li>
+
+				<li><text class="item">15.09.2023 &emsp; Attended <a
+							href="https://hils2024.nl/">Transformers At Work 2023</a></text></li>
+			</ul>
+		</body>
 
 	</html>

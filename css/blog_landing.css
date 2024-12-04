@@ -61,7 +61,13 @@ body{
     margin: 20px;
 }
 
-.blog-img img{
+.blog-img {
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.blog-img img {
     width: 350px;
     height: 250px;
     object-fit: cover;
@@ -99,6 +105,8 @@ body{
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 20px 0px;
+    max-height: 4.5em; /* Limits text to 3 lines */
+    min-height: 4.5em;
 }
 
 .blog-text a{
@@ -110,8 +118,10 @@ body{
     transition: all easy 0.35;
 }
 
-@media(max-width:1250px){
+@media(max-width:350px){
     .blog-box{
-        width: 300px;
+        width: 350px;
+        height: 250px;
     }
+}
 }

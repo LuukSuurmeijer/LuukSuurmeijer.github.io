@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="../../css/blogpost.css" />
+        <title>Stardew Crops</title>
+    </head>
+
+    <body>
+        <header class='header'>
+            <nav>
+                <a href="../../blog_landing_page.html">All Posts</a>
+                <a href="../../index.html">Home</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <h1 class="title">Stardew Crop Rotations
+                <br>
+                <span class="subtitle">Addendum to a blogpost I found.</span>
+            </h1>
+            <!-- <ul class="tags">
+
+                <li><a href="/tags/css">css</a></li>
+
+                <li><a href="/tags/minimalism">minimalism</a></li>
+
+            </ul> -->
+            <div class="img">
+                <img src="headerimage" , alt="test image">
+            </div>
+            <p>
+                I play Stardew, a lot. The recent Switch release of the 1.6
+                update is significantly eating into the time I spend on other
+                (more important) things, like programming. I then found <a
+                    href="https://www.lesswrong.com/posts/rEZqP7K4MG6waC2zf/optimizing-crop-planting-with-mixed-integer-linear">this</a>
+                blogpost, which tries to find the optimal crop rotation for
+                Spring of year 1 in Stardew by setting it up as a Linear
+                Optimization Problem. I decided to get two flies with one swat
+                and tinker around with the code.</p>
+            <h2 id="headline-1">
+                Optimal Rotation
+            </h2>
+            <p>
+                The linked post sets up the problem very nicely. The goal is to
+                maximize the amount of cash on hand by the end of the season (28
+                days). To keep it simple, a number of actions the player can
+                take are modelled:
+                watering, planting, and foraging. All the different crops are
+                modelled with their costs and profits over the number of days it
+                takes to grow them. All the actions a player may take are
+                constrained by the amount of energy you have in a day (which is
+                low at the beginning of the game!)Because all the variables are
+                integers, this problem can be solved by <a
+                    href="https://en.wikipedia.org/wiki/Linear_programming">Linear
+                    Programming</a>.
+
+            </p>
+
+            <p>Optimizing this problem results in the following rotation: <img
+                    src="img/no_strawberry.png"></img>
+
+            Cauliflower seems to be king, and the rotation seems to be based
+            around getting as much of it as possible. This rotation gives you an
+            impressive 20,865g at the end of the season.</p>
+
+        <h2>Some missing assumptions</h2>
+
+        <p>This looks good, but an important element is missing from the
+            analysis. Veteran Stardew players will know from experience that the
+            most OP crop in
+            the spring is <a
+                href="https://stardewvalleywiki.com/Strawberry">Strawberry</a>.
+            This crop is not taken into account here. I suspected the optimal
+            rotation is significantly impacted by including strawberries.
+            Strawberries are peculiar, because they can only be bought during
+            the Egg Festival on the 12th of spring. Implementing this in the
+            original code proved a bit finicky. I ended up modelling this by
+            setting the expense relevancy matrix to +inf for strawberries on
+            days before the 12th, effectively making it never worth it to buy
+            strawberries before this day (in reality, this is not even
+            possible).</p>
+
+        <p>
+            Players buy seeds from Pierre's shop, but the analysis doesn't
+            include that the shop is closed on wednesdays. The second assumption
+            I built in is that it's not possible to buy seeds from Pierre on
+            wednesdays. I used a similar approach as for the strawberries.
+            Namely the expense of all crops on these days are set to +inf.
+            Additionally you cannot forage during the Egg Festival.
+        </p>
+        <p>
+            Building in these assumptions results in a quite different optimal
+            crop rotation! <img src="img/stardew_all_assumptions_crops.png"></img>
+            And here is the graph showing the profits over time. <img src="img/stardew_all_assumptions_gold.png"></img>As
+            expected strawberries play a major role in this rotation. Kale and
+            garlic is strategically planted and sold just in time to have some
+            cash on the 12th to buy strawberries. The importance of cauliflower
+            remains as a big driver of income by the end of the season. This
+            rotation nets you a bit less than the original analysis (19.750.0g),
+            but this is because the additional constraint of not being able to
+            buy on some days hampers profits alltogether. Exlcuding
+            strawberries, but keeping the wednesdays/egg festival constraint
+            gets you 19.335g. Not that much less, but it is still not optimal to
+            ignore strawberries.
+        </p>
+
+        <p>Something still felt off about this result. I noticed the lack of potatoes in the supposed optimal rotation. Experience tells me that potatoes are pretty good, so something had to be wrong. The missing piece was the fact that potatoes sell for 80g, but they also have a 10% chance to yield 2 potatoes instead of 1.
+            This gives them an increased expected value of 96g! Adding this into the mix we get the following results.
+            <img src="img/potato_stardew.png"></img> The profits at the end of the season here come down to 21.533g. Potatoes are indeed really good it seems! Adding this assumption makes strawberries a lot less pronounced, but still part of the rotation.
+</p>
+
+<p>If you want to try this out in the actual game, let me know if you manage to get 21k gold at the end of the season!</p>
+
+        <!-- FOOTNOTES -->
+        <footer>
+            <ul>
+                <a href="links_november_2024.html">Back to top</a>
+            </ul>
+        </footer>
+
+    </body>
+</html>
